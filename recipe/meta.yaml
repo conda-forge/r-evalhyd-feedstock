@@ -12,7 +12,7 @@ source:
   sha256: 1f86d2b87de2d53c5cf95b98c52281f452a4b30e74b8b55f9ff655c5144643f2
 
 build:
-  number: 0
+  number: 1
   merge_build_host: true  # [win]
   script_env:
     - EVALHYD_R_VENDOR_XTL=FALSE
