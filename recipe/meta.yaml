@@ -1,7 +1,6 @@
 {% set version = "0.1.2.0" %}
 
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-evalhyd
@@ -12,8 +11,7 @@ source:
   sha256: 832b49f7fbc446f95023a99475c121b9ba1c81430c8919d773e9f1458f8f7eed
 
 build:
-  number: 1
-  merge_build_host: true  # [win]
+  number: 2
   script_env:
     - EVALHYD_R_VENDOR_XTL=FALSE
     - EVALHYD_R_VENDOR_XTENSOR=FALSE
@@ -31,6 +29,7 @@ requirements:
   build:
     - cross-r-base {{ r_base }}   # [build_platform != target_platform]
     - {{ compiler('cxx') }}       # [unix]
+    - {{ stdlib("c") }}         # [unix]
     - {{ compiler('r_clang') }}   # [win]
     - {{ posix }}filesystem       # [win]
     - {{ posix }}make
