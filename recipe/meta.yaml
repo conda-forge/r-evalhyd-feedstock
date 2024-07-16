@@ -30,7 +30,7 @@ requirements:
     - cross-r-base {{ r_base }}   # [build_platform != target_platform]
     - {{ compiler('cxx') }}       # [unix]
     - {{ stdlib("c") }}         # [unix]
-    - {{ compiler('r_clang') }}   # [win]
+    - {{ compiler('m2w64_cxx') }}   # [win]
     - {{ posix }}filesystem       # [win]
     - {{ posix }}make
     - {{ posix }}sed              # [win]
@@ -48,7 +48,6 @@ requirements:
     - r-base
     - {{ pin_compatible('xtensor-r', max_pin='x.x') }}
     - r-rcpp >=0.11.0
-    - libevalhyd ==0.1.2
 
 test:
   commands:
