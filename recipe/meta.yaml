@@ -11,7 +11,7 @@ source:
   sha256: 832b49f7fbc446f95023a99475c121b9ba1c81430c8919d773e9f1458f8f7eed
 
 build:
-  number: 2
+  number: 3
   script_env:
     - EVALHYD_R_VENDOR_XTL=FALSE
     - EVALHYD_R_VENDOR_XTENSOR=FALSE
