@@ -12,6 +12,7 @@ source:
 
 build:
   number: 3
+  skip: True  # [osx]
   script_env:
     - EVALHYD_R_VENDOR_XTL=FALSE
     - EVALHYD_R_VENDOR_XTENSOR=FALSE
