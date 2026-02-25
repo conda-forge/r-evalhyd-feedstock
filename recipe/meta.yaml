@@ -1,4 +1,4 @@
-{% set version = "0.1.2.0" %}
+{% set version = "0.1.3.0" %}
 
 {% set posix = 'm2-' if win else '' %}
 
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://gitlab.irstea.fr/HYCAR-Hydro/evalhyd/evalhyd-r/-/archive/v{{ version }}/evalhyd-r-v{{ version }}.tar.gz
-  sha256: 832b49f7fbc446f95023a99475c121b9ba1c81430c8919d773e9f1458f8f7eed
+  sha256: 0533912af06927a5f18c409cb3be61837596235e26ee5bdf1d71671e34d4052e
 
 build:
-  number: 3
-  skip: True  # [osx]
+  number: 0
+  skip: true  # [osx]
   script_env:
     - EVALHYD_R_VENDOR_XTL=FALSE
     - EVALHYD_R_VENDOR_XTENSOR=FALSE
